@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Семья Дылыковых и Бадураевых</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Marck+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <button class="music-toggle" id="musicToggle" type="button" aria-pressed="true">
+        Музыка: вкл
+      </button>
+      <div class="hero__glow hero__glow--one"></div>
+      <div class="hero__glow hero__glow--two"></div>
+      <p class="hero__eyebrow">Семейный сайт</p>
+      <h1 class="hero__title" id="heroTitle">Семья Дылыковых и Бадураевых</h1>
+      <p class="hero__subtitle">
+        Любимые люди, важные истории и одно общее фото, в котором собрана целая жизнь.
+      </p>
+    </header>
+
+    <main class="layout">
+      <section class="family-memory">
+        <div class="family-memory__image-wrap">
+          <img class="family-memory__image" src="./family-group.jfif" alt="Общая фотография семьи Дылыковых и Бадураевых">
+        </div>
+        <div class="family-memory__content">
+          <p class="family-memory__eyebrow">Общий кадр</p>
+          <h2 class="family-memory__title">Самая важная фотография на этом сайте</h2>
+          <p class="family-memory__text">
+            Здесь вся семья вместе. Этот снимок добавляет сайту общее настроение и напоминает, что за каждой карточкой стоит одна большая история.
+          </p>
+        </div>
+      </section>
+
+      <section class="spotlight" aria-labelledby="spotlightName">
+        <div class="spotlight__photo-wrap">
+          <div class="spotlight__halo"></div>
+          <div class="spotlight__photo" id="spotlightPhoto"></div>
+        </div>
+        <div class="spotlight__content">
+          <p class="spotlight__role" id="spotlightRole"></p>
+          <h2 class="spotlight__name" id="spotlightName"></h2>
+          <p class="spotlight__description" id="spotlightDescription"></p>
+          <p class="spotlight__hint">Нажмите на фото или имя снизу, чтобы вывести другого члена семьи на главный экран.</p>
+        </div>
+      </section>
+
+      <section class="family-list">
+        <div class="family-list__head">
+          <h3>Наша семья</h3>
+          <p>Порядок соответствует фотографии слева направо.</p>
+        </div>
+        <div class="family-grid" id="familyGrid"></div>
+      </section>
+    </main>
+  </div>
+
+  <template id="memberTemplate">
+    <button class="member-card" type="button">
+      <span class="member-card__photo"></span>
+      <span class="member-card__text">
+        <span class="member-card__name"></span>
+        <span class="member-card__meta"></span>
+      </span>
+    </button>
+  </template>
+
+  <audio id="familyAudio" src="./family-music.mp3" loop preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
